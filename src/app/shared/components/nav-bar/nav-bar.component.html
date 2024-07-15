@@ -1,0 +1,22 @@
+<nav class="nav-bar">
+  <a
+    class="nav-bar__tab"
+    [routerLink]="['/dashboard']"
+    [class.is-active]="dashboardLink.isActive"
+    routerLinkActive="nav-bar__tab--active"
+    #dashboardLink="routerLinkActive"
+  >
+    Dashboard (DI)
+  </a>
+
+  <a
+    class="nav-bar__tab"
+    [routerLink]="['/company']"
+    [routerLinkActive]="['is-active']"
+    [class.is-active]="companyLink.isActive"
+    routerLinkActive="nav-bar__tab--active"
+    #companyLink="routerLinkActive"
+  >
+    Company (CD)
+  </a>
+</nav>

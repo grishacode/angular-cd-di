@@ -1,0 +1,27 @@
+.company {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__card {
+    min-width: 80%;
+    max-width: 80%;
+  }
+
+  &__card-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__edit-company,
+  &__create-company {
+    width: 40%;
+  }
+
+  &__create-company {
+    display: flex;
+    flex-direction: column;
+  }
+}

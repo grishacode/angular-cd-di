@@ -1,0 +1,17 @@
+.nav-bar {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  &__tab {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .is-active {
+    text-decoration: underline blue;
+  }
+}

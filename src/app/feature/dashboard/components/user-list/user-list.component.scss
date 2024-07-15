@@ -1,0 +1,11 @@
+.user-list {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__card {
+    min-width: 80%;
+    max-width: 80%;
+  }
+}
