@@ -1,5 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Country } from '../../../../core/models/country.model';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
+import { Company } from '../../../../core/models/company.model';
+import { SnackbarService } from '../../../../core/models/snackbar.service';
 
 @Component({
   selector: 'app-company-details',
@@ -8,5 +15,18 @@ import { Country } from '../../../../core/models/country.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CompanyDetailsComponent {
-  @Input() company: Country;
+  @Input() set company(company: Company) {
+    this.newCompany = { name: company.name, city: company.city };
+  }
+  @Output() changedCompany = new EventEmitter();
+  public newCompany: Company;
+
+  constructor(private readonly snackbarService: SnackbarService) {
+    // This is simple example which show how we can use view providers
+    this.snackbarService.showSnackBar('Hello DI');
+  }
+
+  public updateCompany(): void {
+    this.changedCompany.emit(this.newCompany);
+  }
 }

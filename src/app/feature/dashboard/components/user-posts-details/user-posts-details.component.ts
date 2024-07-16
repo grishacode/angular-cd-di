@@ -9,14 +9,15 @@ import { CountPostsService } from '../../../../core/services/count-posts.service
   selector: 'app-user-details-post',
   templateUrl: './user-posts-details.component.html',
   styleUrls: ['./user-posts-details.component.scss'],
+  // One of the option how to apply service in component, what is mean that you can use that service just here
   providers: [CountPostsService],
 })
 export class UserPostsDetailsComponent implements OnInit, OnDestroy {
   public posts: Post[];
-  public currentId: number;
   public displayedColumns: string[] = ['id', 'title', 'body'];
   public showCountPosts: number;
 
+  private currentId: number;
   private destroy$ = new Subject<boolean>();
 
   constructor(

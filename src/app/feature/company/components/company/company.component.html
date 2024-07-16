@@ -1,10 +1,11 @@
 <div class="company">
-  <mat-card class="company__card">
+  <mat-card>
     <mat-card-header>
       <h2>Create Company</h2>
     </mat-card-header>
     <mat-card-content class="company__card-content">
       <div class="company__create-company">
+        <h3>Parent Component</h3>
         <mat-form-field>
           <mat-label>Company Name</mat-label>
           <input matInput type="text" name="Name" required placeholder="Name" [(ngModel)]="company.name" />
@@ -13,10 +14,10 @@
           <mat-label>City</mat-label>
           <input matInput type="text" name="City" required placeholder="City" [(ngModel)]="company.city" />
         </mat-form-field>
-        {{ company | json }}
         <button mat-raised-button color="primary" (click)="createCompany()">Create Company</button>
+        {{ company | json }}
       </div>
-      <app-company-details *ngIf="company" [company]="company" class="company__edit-company"></app-company-details>
+      <app-company-details [company]="company" (changedCompany)="updateCompany($event)" class="company__edit-company"></app-company-details>
     </mat-card-content>
   </mat-card>
 </div>

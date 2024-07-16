@@ -1,12 +1,14 @@
 <div class="company-details">
+  <h3>Child Component</h3>
   <mat-form-field>
     <mat-label>Company Name</mat-label>
-    <input matInput type="text" name="Name" required placeholder="Name" [(ngModel)]="company.name" />
+    <input matInput type="text" name="Name" required placeholder="Name" [(ngModel)]="newCompany.name" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>City</mat-label>
-    <input matInput type="text" name="City" required placeholder="City" [(ngModel)]="company.city" />
+    <input matInput type="text" name="City" required placeholder="City" [(ngModel)]="newCompany.city" />
   </mat-form-field>
+  <button mat-raised-button color="primary" (click)="updateCompany()">Update Company</button>
 </div>
 
-{{ company | json }}
+{{ newCompany | json }}

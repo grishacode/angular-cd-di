@@ -7,8 +7,9 @@ import { UserService } from '../../../../core/services/user.service';
   styleUrls: ['./user-list.component.scss'],
 })
 export class UserListComponent {
-  public users = this.userService.getUsers();
+  public users$ = this.userService.getUsers();
 
   public displayedColumns: string[] = ['name', 'username', 'phone', 'website', 'actions'];
+
   constructor(private readonly userService: UserService) {}
 }
