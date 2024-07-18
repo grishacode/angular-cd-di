@@ -16,7 +16,7 @@ export class CompanyComponent {
   };
 
   public createCompany(): void {
-    // Create a new link on our object that detect change works in our child component with onPush strategy.
+    // Create a new link in our object that detects changes in our child component using the OnPush strategy.
     this.company = { name: this.company.name, city: this.company.city };
   }
 

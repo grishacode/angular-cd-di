@@ -9,7 +9,7 @@ import { PostsService } from '../../core/services/posts.service';
   declarations: [UserListComponent, UserPostsDetailsComponent],
   imports: [DashboardRoutingModule, SharedModule],
 
-  // When you apply the service in a module, it gives that module the ability to use the service.
+  // When you apply the service in a module, it enables that module to use the service.
   providers: [PostsService],
 })
 export class DashboardModule {}

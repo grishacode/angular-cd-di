@@ -22,7 +22,7 @@ export class CompanyDetailsComponent {
   public newCompany: Company;
 
   constructor(private readonly snackbarService: SnackbarService) {
-    // This is simple example which show how we can use view providers
+    // This is a simple example that shows how we can use view providers.
     this.snackbarService.showSnackBar('Hello DI');
   }
 

@@ -9,7 +9,7 @@ import { CountPostsService } from '../../../../core/services/count-posts.service
   selector: 'app-user-details-post',
   templateUrl: './user-posts-details.component.html',
   styleUrls: ['./user-posts-details.component.scss'],
-  // One of the option how to apply service in component, what is mean that you can use that service just here
+  // One option to apply a service in a component is to provide it directly in the component, meaning you can use that service within that component.
   providers: [CountPostsService],
 })
 export class UserPostsDetailsComponent implements OnInit, OnDestroy {
